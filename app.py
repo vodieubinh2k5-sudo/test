@@ -7,7 +7,7 @@ st.set_page_config(page_title="AI Quiz Generator", page_icon="🎓")
 
 # --- PHẦN CẤU HÌNH AI ---
 # Bạn lấy API Key tại: https://aistudio.google.com/
-API_KEY = "THAY_VÀO_ĐÂY_API_KEY_CỦA_BẠN" 
+API_KEY = st.secrets["GEMINI_API_KEY"] 
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
